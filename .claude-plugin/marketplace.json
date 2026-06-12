@@ -1,0 +1,24 @@
+{
+  "name": "muninn",
+  "owner": {
+    "name": "uaandesign",
+    "url": "https://github.com/uaandesign"
+  },
+  "metadata": {
+    "description": "Marketplace hosting the Muninn skill-leveling plugin."
+  },
+  "plugins": [
+    {
+      "name": "muninn",
+      "description": "Muninn（穆宁）— Skill练级系统。会话考古挖出Skill的实战表现，定级（Lv1雏鸦→Lv5神使）、失败铸成回归考题、试炼升级、红题冻级。产出常驻成长档案saga + 考题集evals + 可截图符文石。",
+      "version": "0.1.0",
+      "author": {
+        "name": "uaandesign",
+        "url": "https://github.com/uaandesign"
+      },
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/uaandesign/muninn"
+    }
+  ]
+}
