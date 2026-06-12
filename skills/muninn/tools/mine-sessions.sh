@@ -7,6 +7,10 @@
 # 注意: 输出片段可能包含隐私，仅供本地定级使用；写入公开产物前必须脱敏。
 set -euo pipefail
 
+# 截断中文需要 UTF-8 locale：C locale 下 bash 子串按字节截断，会把多字节字符截成乱码
+LC_ALL="$(locale -a 2>/dev/null | grep -im1 -E '^(en_US|C)\.UTF-?8$' || echo C)"
+export LC_ALL
+
 SKILL="${1:?用法: mine-sessions.sh <skill-name> [天数] [截断字符数]}"
 DAYS="${2:-30}"
 SNIP="${3:-200}"
@@ -51,7 +55,10 @@ while IFS= read -r f; do
   echo "- 工具/命令调用痕迹: ${invoke:-0} 处"
 
   echo "- 采样片段（已滤除 skill_listing 噪音；每行截断至 ${SNIP} 字符，最多 ${MAX_LINES_PER_KIND} 行）:"
-  grep -n -- "$SKILL" "$f" | grep -v "$NOISE" | head -"$MAX_LINES_PER_KIND" | cut -c1-"$SNIP" | sed 's/^/    /'
+  # 按字符截断（bash 参数展开在 UTF-8 locale 下按字符计数），避免 cut -c 截断多字节中文产生乱码
+  grep -n -- "$SKILL" "$f" | grep -v "$NOISE" | head -"$MAX_LINES_PER_KIND" | while IFS= read -r line; do
+    printf '    %s\n' "${line:0:$SNIP}"
+  done
   echo
 done < <(find "$ROOT" -name '*.jsonl' -mtime "-$DAYS" -size +0c 2>/dev/null | sort -r)
 

@@ -15,6 +15,12 @@
 
 ---
 
+![Muninn demo：放飞渡鸦（会话考古）→ 刻符文石](assets/demo.gif)
+
+<sub>真实运行回放：`mine-sessions.sh` 会话考古 → 符文石等级卡。演示使用合成会话数据（隐私脱敏），录制脚本 [`assets/demo.tape`](assets/demo.tape) 与数据一起入库，`vhs assets/demo.tape` 可随时重录。</sub>
+
+---
+
 ## 它解决什么问题
 
 你写过不少 Skill。写的时候都挺满意，然后呢？

@@ -1,0 +1,5 @@
+{"type":"user","timestamp":"2026-06-10T09:12:00Z","message":{"role":"user","content":"帮我看看今天AI圈有什么新闻"}}
+{"type":"assistant","timestamp":"2026-06-10T09:12:30Z","message":{"role":"assistant","content":"好的，我用通用搜索帮你查一下……"}}
+{"type":"user","timestamp":"2026-06-10T09:13:05Z","message":{"role":"user","content":"/ai-radar"}}
+{"type":"assistant","timestamp":"2026-06-10T09:13:20Z","message":{"role":"assistant","content":[{"type":"tool_use","name":"Skill","input":{"skill":"ai-radar"}}]}}
+{"type":"user","timestamp":"2026-06-10T09:20:00Z","message":{"role":"user","content":"记得用中文输出，上次也说过这个"}}
