@@ -123,7 +123,8 @@ skills/muninn/
 │   ├── mine-sessions.sh          # 放飞：transcript 初筛（只读）
 │   ├── capability-manifest.sh    # 盘点：扫出"它现在能干什么"的清单初稿（只读）
 │   └── scan-skills.sh            # 巡视：全库盘点与培养优先级
-└── examples/                     # 真实案例（首个完整练级案例后补入）
+└── examples/
+    └── weekly-report-capability-catch.md  # 真实案例：能力清单拦住一次"测试全绿的假升级"
 ```
 
 ## 验证与测试
