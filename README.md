@@ -104,7 +104,7 @@ Muninn 不会劝你给一个自用工具硬补发布材料。
 ## 安装
 
 ```bash
-npx skills add uaandesign/muninn
+npx skills add uaandesign/muninn-skill-leveler
 ```
 
 装完，对 Claude Code 说：
