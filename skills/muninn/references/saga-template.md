@@ -34,6 +34,10 @@
 
 见同目录 evals.md（N 道，绿 N / 红 N / 封存 N）
 
+## 定位
+
+见同目录 positioning.md（验前提结论：值得练 / 调定位 / 存疑；一句话新定位：…）
+
 ## 能力清单
 
 见同目录 capability-manifest.md（已冻结 / 待补全；最近核对：YYYY-MM-DD 全项仍在 / 消失项…）
