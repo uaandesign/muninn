@@ -103,7 +103,13 @@ Muninn 的价值在于记忆连续，不在于每次从零开始。
 
 ## 第一步：放飞 Muninn —— 会话考古
 
-跑 `bash tools/mine-sessions.sh <skill-name> [天数]` 拿到初筛报告，再用 Read 工具
+> ⚠️ **先想别名，再放飞。** 真实使用里 skill 常被叫别名/简称（`feilian-ux-zh` 被叫"飞连"），
+> 只搜精确名会**系统性空手而归**——漏掉的恰恰是最值钱的真实使用记录。放飞前先从这个 skill 的
+> `description` 触发词、常见叫法里挑几个当别名，用第 4 个参数一起搜：
+> `bash tools/mine-sessions.sh <name> <天数> <截断> "别名1,别名2,触发词"`。
+> 报告里标 **⚠️仅别名命中** 的会话尤其要看——那是只搜精确名一定会漏的。
+
+跑 `bash tools/mine-sessions.sh <skill-name> [天数] [截断] [别名]` 拿到初筛报告，再用 Read 工具
 按报告里给出的文件路径精读可疑会话片段。**transcript 永远只读，绝不修改、移动、删除。**
 
 要从会话里辨认的五类证据（详细判别方法见 `references/evidence-guide.md`）：
